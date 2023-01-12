@@ -2,6 +2,8 @@
 
 const play = document.querySelector('.play');
 const container = document.getElementById('container');
+const result = document.getElementById('result');
+const replay = document.getElementById('replay');
 
 
 // Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe. 
@@ -48,18 +50,16 @@ play.addEventListener('click',
         
                function () {
 
-         
-                 
-             
         
                  if (this.classList.contains('click') || bombs.includes(parseInt(this.innerText))) {
         
                       this.classList.add('bomb');
+                      result.innerHTML = 'Mi dispiace, hai Perso, il tuo punteggio è:'
+                      replay.style.display = 'block';
+                      
+                     
 
-                    
-                 
-                  
-                    
+                     
         
                  } else {
                   // Quando l'utente clicca su ogni cella, la cella cliccata si colora di giallo 
@@ -75,6 +75,21 @@ play.addEventListener('click',
 
        })
 
+replay.addEventListener ('click', 
+
+       function () {
+
+         replay.style.display = 'none';
+         result.innerHTML = '';
+         this.classList.remove('bomb');
+         this.classList.remove('click');  
+         
+   
+
+       }
+        
+       
+       )
      
        
        

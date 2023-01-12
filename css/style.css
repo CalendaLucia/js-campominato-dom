@@ -42,6 +42,7 @@ main {
     background-color: blueviolet;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #container {
@@ -71,5 +72,25 @@ main {
 
 .bomb {
     background-color: red;
+}
+
+#result {
+    font-size: 20px;
+    width: 80vh;
+    text-align: center;
+    
+
+    
+}
+
+#replay {
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: yellowgreen;
+    color:white;
+    display: none;
+    
+    
 }
 
