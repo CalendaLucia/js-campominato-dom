@@ -68,3 +68,8 @@ main {
 #container-signature {
     padding: 20px 10px;
 }
+
+.bomb {
+    background-color: red;
+}
+
