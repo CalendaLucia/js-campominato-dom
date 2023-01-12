@@ -13,7 +13,7 @@
     padding: 5px 10px;
 }
 
-#container-head, .title, main, #container, .cell   {
+#container-head, .title,  #container, .cell   {
     display: flex;
     align-items: center;
 }
@@ -40,6 +40,7 @@ main {
     width: 100%;
     height: 100vh;
     background-color: blueviolet;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
