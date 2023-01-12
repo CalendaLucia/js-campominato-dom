@@ -51,15 +51,12 @@ play.addEventListener('click',
                function () {
 
         
-                 if (this.classList.contains('click') || bombs.includes(parseInt(this.innerText))) {
+                 if ( bombs.includes(parseInt(this.innerText))) {
         
                       this.classList.add('bomb');
+                      this.classList.remove('click');
                       result.innerHTML = 'Mi dispiace, hai Perso, il tuo punteggio è:'
-                      replay.style.display = 'block';
-                      
-                     
-
-                     
+         
         
                  } else {
                   // Quando l'utente clicca su ogni cella, la cella cliccata si colora di giallo 
@@ -75,21 +72,12 @@ play.addEventListener('click',
 
        })
 
-replay.addEventListener ('click', 
 
-       function () {
+  function loose() {
 
-         replay.style.display = 'none';
-         result.innerHTML = '';
-         this.classList.remove('bomb');
-         this.classList.remove('click');  
-         
+   return this.classList.contains('click') 
    
-
-       }
-        
-       
-       )
+  }
      
        
        

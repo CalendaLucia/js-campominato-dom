@@ -43,7 +43,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 #container {
@@ -65,6 +64,36 @@ main {
     background-color: yellow;
 }
 
+/* ASIDE STYLE  */
+
+aside {
+    background-color: blueviolet;
+}
+
+#result {
+    margin: 0 auto;
+    padding: 5px 0px;
+    font-size: 20px;
+    width: 80vh;
+    text-align: center;
+
+}
+
+#replay {
+    margin: 0 auto;
+    padding: 5px 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: yellowgreen;
+    color:white;
+    display: none;
+    poi
+}
+
+#end-game {
+    padding: 10px 0px;
+}
+
 /* FOOTER STYLE */
 
 #container-signature {
@@ -75,23 +104,5 @@ main {
     background-color: red;
 }
 
-#result {
-    font-size: 20px;
-    width: 80vh;
-    text-align: center;
-    
 
-    
-}
-
-#replay {
-    padding: 5px 15px;
-    border-radius: 10px;
-    border: none;
-    background-color: yellowgreen;
-    color:white;
-    display: none;
-    
-    
-}
 
