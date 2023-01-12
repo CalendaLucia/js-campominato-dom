@@ -6,7 +6,6 @@ const result = document.getElementById('result');
 const replay = document.getElementById('replay');
 const counter = document.getElementById('counter');
 let playCounter = 0;
-let newGame = 0;
 
 // Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe. 
    
@@ -61,6 +60,7 @@ play.addEventListener('click',
                       console.log(playCounter);
                       result.innerHTML = 'Mi dispiace, hai Perso, il tuo punteggio è:' +  playCounter;
                       replay.style.display = 'block';
+                      
                    
          
    
@@ -73,19 +73,23 @@ play.addEventListener('click',
                     
                  }
 
+                 replay.addEventListener('click',
+         
+                 function () {
+
+                    result.style.display = 'none';
+                    replay.style.display = 'none';
+                    cell.classList.remove('click');
+                    cell.classList.remove('bomb');
+ 
+        
+     })
+
                 
                });
         }
 
-        replay.addEventListener('click',
-         
-        function () {
-  
-           result.style.display = 'none';
-           replay.style.display = 'none';
-       
-           
-        })
+          
 
        });
 
