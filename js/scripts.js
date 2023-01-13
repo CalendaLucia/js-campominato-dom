@@ -5,7 +5,8 @@ const container = document.getElementById('container');
 const result = document.getElementById('result');
 const replay = document.getElementById('replay');
 const counter = document.getElementById('counter');
-let playCounter = 0;
+let playCounter = 1;
+
 
 // Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe. 
    
@@ -15,27 +16,30 @@ function createBombs(min, max) {
     let bombs = [];
     let i = 0;
 
-    while(i < 16){
+    while (i < 16){
 
         let numRandom = Math.floor(Math.random() * (max - min + 1)) + min;
 // perciò nell'array delle bombe non potranno esserci due numeri uguali.
-        if(!bombs.includes(numRandom)){
+        if (!bombs.includes(numRandom)){
             bombs.push(numRandom);
             i++;
         }
 
     }
+
     return bombs;
 }
 
-const bombs = createBombs(1, 100);
-console.log(bombs)
+
 
 play.addEventListener('click', 
       
        function () {
        
-        
+        container.innerHTML = '';
+     
+        const bombs = createBombs(1, 100);
+
         for (let i = 1; i < 101; i++) {
 
             // Creo le celle con un ciclo for e le aggiungo al container
@@ -51,48 +55,58 @@ play.addEventListener('click',
         
                function () {
 
-        
+          // Quando l'utente clicca su ogni cella, la cella cliccata si colora di giallo 
+                 this.classList.add('click');  
+                 console.log([i]);
+
                  if ( bombs.includes(parseInt(this.innerText))) {
         
                       this.classList.add('bomb');
                       this.classList.remove('click');
-                      playCounter++;
-                      console.log(playCounter);
                       result.innerHTML = 'Mi dispiace, hai Perso, il tuo punteggio è:' +  playCounter;
+                      result.style.display = 'block';
                       replay.style.display = 'block';
+
                       
-                   
-         
-   
                  } else {
 
-                  // Quando l'utente clicca su ogni cella, la cella cliccata si colora di giallo 
-                    this.classList.add('click');  
-                    console.log([i]);
-               
-                    
+                    this.classList.add('click');
+                    playCounter++;
+                    console.log(playCounter);
+
                  }
 
-                 replay.addEventListener('click',
-         
-                 function () {
+                 
 
-                    result.style.display = 'none';
-                    replay.style.display = 'none';
-                    cell.classList.remove('click');
-                    cell.classList.remove('bomb');
- 
-        
-     })
-
-                
+               
                });
+
+
+
+
         }
 
-          
+    
 
-       });
+ });
 
+
+ replay.addEventListener('click',
+         
+ function () {
+
+    result.style.display = 'none';
+    replay.style.display = 'none';
+    playCounter = 0;
+    container.innerHTML = '';
+    let bombs = [];
+
+ 
+
+
+
+
+});
 
 
 
