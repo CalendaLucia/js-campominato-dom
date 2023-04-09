@@ -56,11 +56,11 @@ main {
     height: calc(100% / 10);
     border: 1px solid white;
     justify-content: center;
-   font-size: 13px;
-   background-color: yellowgreen;
+    font-size: 13px;
+    background-color: yellowgreen;
 }
 
-.click {
+.ok {
     background-color: yellow;
 }
 
@@ -103,6 +103,5 @@ aside {
 .bomb {
     background-color: red;
 }
-
 
 

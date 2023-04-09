@@ -92,6 +92,22 @@ main {
     background-color: yellow;
 }
 
+#result {
+    margin: 0 auto;
+    padding: 5px 0px;
+    font-size: 20px;
+    width: 80vh;
+    text-align: center;
+    color: white;
+    background-color: red;
+    padding: 30px 0px;
+
+}
+
+.bomb {
+    background-color: red;
+}
+
 /* FOOTER STYLE */
 
 #container-signature {
